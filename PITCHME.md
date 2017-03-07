@@ -14,6 +14,8 @@ Markup language
 
 ## HTML4
 
+[index.html](examples/html4base.html)
+
 ```html
 <html>
   <head>
@@ -54,6 +56,8 @@ Markup language
 </body>
 </html>
 ```
+
+#VSLIDE
 
 ![Layout](http://www.developer.com/imagesvr_ce/3977/Figure01.png)
 
