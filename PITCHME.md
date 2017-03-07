@@ -390,8 +390,35 @@ TODO: IIF
 TODO: js executoion model
 TODO: ajax
 
+#HSLIDE
+
 # Frameweroks
 
+TODO: lodash
 TODO: bootstrap
 TODO: jquery
 TODO: react
+
+#HSLIDE
+
+# Git
+
+TODO:
+git init
+git add
+git commit
+git checkout
+
+#VSLIDE
+
+git clone
+git remote add
+git push
+git pull
+github fork
+
+#VSLIDE
+
+git checkout -b
+git merge
+git rebase
