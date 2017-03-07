@@ -350,6 +350,14 @@ TODO: most used html tags
 
 #HSLIDE
 
+TODO: box model
+TODO: table
+TODO: display
+TODO: flex
+TODO: media query
+
+#HSLIDE
+
 TODO: css transitions, transformations, animations
 
 #HSLIDE
