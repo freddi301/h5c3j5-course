@@ -14,7 +14,7 @@ Markup language
 
 ## HTML4
 
-[index.html](examples/html4base.html)
+[index.html](https://github.com/freddi301/h5c3j5-course/blob/master/examples/html4base.html)
 
 ```html
 <html>
