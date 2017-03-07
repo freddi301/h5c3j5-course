@@ -156,17 +156,53 @@ p { color: red }
 
 #VSLIDE
 
-- DOM
+# in dev console
+
+Chrome -> options -> dev tools -> console
+
+```javascript
+alert("hello world")
+```
 
 #VSLIDE
 
-# Building Blocks
+# html inline
 
-- function
-- object
-- clojure
-- this, call()
-- prototype chain, classes
+```html
+<button onclick="alert('hello')"></button>
+```
+
+#VSLIDE
+
+# html tag
+
+```html
+<html>
+  <head>
+    <script>
+      alert("hello")
+    </script>
+  </head>
+</html>
+```
+
+#VSLIDE
+
+# external script
+
+index.html
+```html
+<html>
+  <head>
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+</html>
+```
+
+script.js
+```javascript
+alert("hello")
+```
 
 #VSLIDE
 
@@ -231,11 +267,9 @@ child selector
 div p { color: blue }
 ```
 ```html
-<div>
-  <section>
+<div><section>
     <p >hello</p>
-  </section>
-</div>
+</section></div>
 ```
 
 direct child selector
@@ -309,3 +343,55 @@ document.querySelectorAll("p.highlight")
 [new in CSS3](http://tutorialzine.com/2013/10/12-awesome-css3-features-you-can-finally-use/)
 
 [reference](https://www.w3schools.com/cssref/css_selectors.asp)
+
+#HSLIDE
+
+TODO: most used html tags
+
+#HSLIDE
+
+TODO: css transitions, transformations, animations
+
+#HSLIDE
+
+TODO:
+onclick
+addEventListener
+event bubbling
+
+#HSLIDE
+
+- function
+- object
+- DOM
+
+#HSLIDE
+
+todo: validating form
+
+#HSLIDE
+
+# Lab
+
+TODO: cineforum
+
+#HSLIDE
+
+TODO:
+- clojure
+- this, call()
+- prototype chain, classes
+
+#HSLIDE
+
+TODO: listeners
+TODO: promise
+TODO: IIF
+TODO: js executoion model
+TODO: ajax
+
+# Frameweroks
+
+TODO: bootstrap
+TODO: jquery
+TODO: react
