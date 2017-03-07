@@ -4,6 +4,16 @@
 
 #HSLIDE
 
+# The tools
+
+Browser - [Chrome](https://www.google.it/chrome/browser/desktop/)
+
+Text Editor - [Atom](https://atom.io/)
+
+Versioning - [Git](https://git-scm.com/)
+
+#HSLIDE
+
 # HTML
 
 Markup language
@@ -165,3 +175,137 @@ p { color: red }
 - [JavaScript Allonge](https://leanpub.com/javascriptallongesix/read)
 - [JavaScript The Good Parts](http://bdcampbell.net/javascript/book/javascript_the_good_parts.pdf)
 - [YDKJS](https://github.com/getify/You-Dont-Know-JS)
+
+#HSLIDE
+
+# CSS Selectors
+
+All CSS rules are in form
+```css
+slecetor {
+  property: value
+}
+```
+
+The most specific rules applies
+
+#VSLIDE
+
+element selector
+```css
+p { color: red }
+```
+```html
+<p>hello</p>
+```
+
+class selector
+```css
+.paragraph { color: blue }
+```
+```html
+<p class="paragraph">hello</p>
+```
+
+id selector
+```css
+#par { color: red }
+```
+```html
+<p id="par">hello</p>
+```
+
+#VSLIDE
+
+multiple selector
+```css
+p, h1 { color: red }
+```
+```html
+<h1>Heading</h1>
+<p>hello</p>
+```
+
+child selector
+```css
+div p { color: blue }
+```
+```html
+<div>
+  <section>
+    <p >hello</p>
+  </section>
+</div>
+```
+
+direct child selector
+```css
+div>p { color: blue }
+```
+```html
+<div>
+  <p >hello</p>
+</div>
+```
+
+#VSLIDE
+
+attribute selector
+```css
+[target=_blank] { font-size: 30px }
+```
+```html
+<a href="#" target="_blank">link</a>
+```
+
+state selector
+```css
+p:hover { background-color: yellow }
+```
+```html
+<p>move mouse here</p>
+```
+
+add content selector
+```css
+p::after {
+    content: "thiw will appear after every <p> element";
+}
+```
+```html
+<p>mLorem ipsum</p>
+```
+
+#VSLIDE
+
+combined selectors
+```css
+nav>a.home:hover { background-color: "blue"; }
+```
+
+override properties (if do not want to write too specific selector)
+```css
+a { background-color: red !important; }
+```
+
+#VSLIDE
+
+in javascript you can select elements by css selector
+
+get the first one
+```javascript
+document.querySelector("p#theText")
+```
+
+get all
+```javascript
+document.querySelectorAll("p.highlight")
+```
+
+#VSLIDE
+
+[reccomended](https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048)
+
+[new in CSS3](http://tutorialzine.com/2013/10/12-awesome-css3-features-you-can-finally-use/)
+
+[reference](https://www.w3schools.com/cssref/css_selectors.asp)
