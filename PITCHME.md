@@ -602,6 +602,24 @@ TODO
 <div class="mediaQueryDemo"></div>
 ```
 
+<style>
+ .mediaQueryDemo {
+   background-color: purple;
+   display: inline-block;
+   height: 20px;
+ }
+@media (min-width: 400px) {
+  .mediaQueryDemo { width: 50%; }
+}
+ @media (min-width: 800px) {
+  .mediaQueryDemo { width: 24%; }
+}
+</style>
+<div class="mediaQueryDemo"></div>
+<div class="mediaQueryDemo"></div>
+<div class="mediaQueryDemo"></div>
+<div class="mediaQueryDemo"></div>
+
 #VSLIDE
 
 # Responsive
