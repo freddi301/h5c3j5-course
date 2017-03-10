@@ -1013,6 +1013,8 @@ TODO:
 # Introspection
 
 TODO:
+- typeof
+- instanceof
 - Object.keys
 - Object.getOwnPropertyNames
 
@@ -1021,6 +1023,8 @@ TODO:
 TODO
 - store data on html elements
 - store data in html dataset
+
+#HSLIDE
 
 # Lab
 
