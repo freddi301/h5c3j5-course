@@ -631,10 +631,10 @@ CSSe feature that allow subdividing space and [lot more](https://css-tricks.com/
    height: 20px;
  }
 @media (min-width: 400px) {
-  .mediaQueryDemo { width: 49%; }
+  .mediaQueryDemo { width: 50%; }
 }
  @media (min-width: 800px) {
-  .mediaQueryDemo { width: 24%; }
+  .mediaQueryDemo { width: 25%; }
 }
 </style>
 <div class="mediaQueryDemo"></div>
@@ -650,7 +650,7 @@ CSSe feature that allow subdividing space and [lot more](https://css-tricks.com/
    height: 20px;
  }
 @media (min-width: 400px) {
-  .mediaQueryDemo { width: 50%; }
+  .mediaQueryDemo { width: 49%; }
 }
  @media (min-width: 800px) {
   .mediaQueryDemo { width: 24%; }
