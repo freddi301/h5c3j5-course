@@ -591,7 +591,7 @@ TODO
 
 # flex
 
-CSSe feature that allow subdividing space and [lot more](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+CSS3 feature, allows subdividing space and [lot more](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
 ```html
 <style>
