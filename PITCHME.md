@@ -802,9 +802,73 @@ console.log(clojure(2)(3));
 
 #HSLIDE
 
-- object
-- JSON
-- console (debug, info, log, warn, error, table, inspect clear)
+# object literal
+
+```javascript
+var obj = {
+  a: 1,
+  b: {
+    c: [2,3,4]
+  }
+};
+console.log(obj.a);
+console.log(obj.b.c[0]);
+```
+
+#VSLIDE
+
+# JSON
+
+is the most used information exchange format
+
+```javascript
+JSON.stringify({a: 2, b: [1, 'c']});
+
+JSON.parse('{"a": 2, "b": [1, "c"]}');
+```
+
+#HSLIDE
+
+# console.log
+
+use to log information or errors to console, in severity order
+
+```javascript
+console.debug('debugging info such as intermediate result');
+console.info('some ordinary event occurred');
+console.log('this should be read by a developer');
+console.warn('some expected but unwanted error occurred');
+console.error('some fatal error occurred');
+console.clear(); // clear console;
+```
+
+#VSLIDE
+
+# console debugging utils
+
+```javascript
+console.assert(1 == 2) // will throw an error if argument is false
+console.trace({ a: 5 }) // same as console.log but report line code
+console.count('a'); console.count('b'); console.count('a'); // will count how many times a string appears
+console.time('event1'); console.timeEnd('event1'); // display time passed
+console.group('more log'); console.log(1); console.log('hello'); console.groupEnd('more log');
+```
+
+#VSLIDE
+
+# console display utils
+
+```javascript
+console.dir({ x: 6 });
+console.table([
+  { name: 'foo', age: 33 },
+  { name: 'bar', age: 66 }
+]);
+console.log("%cBig Red", "color: red; font-size: 50px");
+```
+
+#HSLIDE
+
 - DOM (get/setAttribute() appendChild())
 
 #HSLIDE
