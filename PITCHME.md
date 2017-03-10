@@ -166,6 +166,14 @@ style.css
 p { color: red }
 ```
 
+#VSLIDE
+
+Not all browser supports css and behave consistently
+
+You have to use [normalize.css](https://necolas.github.io/normalize.css/)
+
+and add [prefixes](https://autoprefixer.github.io/) for transitions for example
+
 #HSLIDE
 
 # JavaScript
@@ -226,6 +234,16 @@ script.js
 ```javascript
 alert("hello")
 ```
+
+#VSLIDE
+
+Not every browser supports every feature of javascript
+
+You might need to use
+
+- [shims](https://github.com/es-shims/es5-shim)
+- [polyfills](https://remysharp.com/2010/10/08/what-is-a-polyfill)
+- [transpilers](https://babeljs.io/)
 
 #VSLIDE
 
@@ -302,10 +320,10 @@ alert("hello")
 # Image
 
 ```html
-<img src="https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png"/>
+<img src="https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png" style="width: 100px"/>
 ```
 
-<img src="https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png"/>
+<img src="https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png" style="width: 100px"/>
 
 #VSLIDE
 
@@ -559,14 +577,61 @@ TODO
 - table
 - display
 - flex
-- media query
+- media query (responsive, chrome responsive mode)
 
 #HSLIDE
 
-TODO:
+# CSS The moving parts
+
 - transitions
 - transformations
 - animations
+
+#VSLIDE
+
+# Transitions
+
+```html
+<style>
+  div.transitionDemo {
+    width: 20px; height: 20px;
+    background-color: red
+  }
+
+  div.transitionDemo:hover {
+    width: 40px; height: 40px;
+    background-color: blue;
+    transition: all 1s;
+  }
+</style>
+<div class="transitionDemo"></div>
+```
+
+<style>
+  div.transitionDemo {
+    width: 20px; height: 20px;
+    background-color: red
+  }
+
+  div.transitionDemo:hover {
+    width: 40px; height: 40px;
+    background-color: blue;
+    transition: all 1s;
+  }
+</style>
+<div class="transitionDemo"></div>
+
+#VSLIDE
+
+# Transformations
+
+todo
+
+#VSLIDE
+
+# Animations
+
+todo
 
 #HSLIDE
 
@@ -575,7 +640,8 @@ TODO: cineforum non interactive
 #HSLIDE
 
 - function
-- TODO: hoisting
+- hoisting
+- clojure
 - object
 - JSON
 - console (debug, info, log, warn, error, table, inspect clear)
@@ -602,7 +668,7 @@ todo:
 
 set breakpoints and inspect code step by step
 
-[debugger](https://developers.google.com/web/tools/chrome-devtools/javascript/imgs/get-started-watch-expression.png)
+![debugger](https://developers.google.com/web/tools/chrome-devtools/javascript/imgs/get-started-watch-expression.png)
 
 #HSLIDE
 
@@ -613,7 +679,6 @@ TODO: cineforum interactive
 #HSLIDE
 
 TODO:
-- clojure
 - this, call()
 - prototype chain, classes
 
@@ -622,7 +687,7 @@ TODO:
 TODO
 - promise
 - IIF
-- js executoion model
+- js execution model
 - ajax
 
 #HSLIDE
@@ -648,15 +713,15 @@ TODO
 #VSLIDE
 
 TODO
-- git clone
-- git remote add
-- git push
-- git pull
-- github fork
+- git checkout -b
+- git merge
+- git rebase -i HEAD~3
 
 #VSLIDE
 
 TODO
-- git checkout -b
-- git merge
-- git rebase
+- git clone
+- git remote add
+- git push
+- git pull
+- github fork (pull request)
