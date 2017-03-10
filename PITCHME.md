@@ -255,6 +255,16 @@ You might need to use
 
 #HSLIDE
 
+# Compatibility Recap
+
+when using html5, css3, javascript >= 5 features
+
+always check that they work on all target browsers
+
+[can i use](http://caniuse.com/) is a good reference
+
+#HSLIDE
+
 # HTML Tags
 
 #VSLIDE
@@ -576,7 +586,38 @@ TODO
 - box model
 - table
 - display
-- flex
+
+#HSLIDE
+
+# flex
+
+CSSe feature that allow subdividing space and [lot more](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
+```html
+<style>
+  div.flexContainer { display: flex; }
+  div.flex-1 { flex-grow: 1 }
+  div.flex-2 { flex-grow: 2 }
+  div[class^="flex-"] { height: 20px; }
+</style>
+<div class="flexContainer">
+  <div class="flex-1" style="background-color: yellow"></div>
+  <div class="flex-2" style="background-color: orange"></div>
+  <div class="flex-1" style="background-color: red"></div>
+</div>
+```
+
+<style>
+  div.flexContainer { display: flex; }
+  div.flex-1 { flex-grow: 1 }
+  div.flex-2 { flex-grow: 2 }
+  div[class^="flex-"] { height: 20px; }
+</style>
+<div class="flexContainer">
+  <div class="flex-1" style="background-color: yellow"></div>
+  <div class="flex-2" style="background-color: orange"></div>
+  <div class="flex-1" style="background-color: red"></div>
+</div>
 
 #HSLIDE
 
@@ -590,7 +631,7 @@ TODO
    height: 20px;
  }
 @media (min-width: 400px) {
-  .mediaQueryDemo { width: 50%; }
+  .mediaQueryDemo { width: 49%; }
 }
  @media (min-width: 800px) {
   .mediaQueryDemo { width: 24%; }
@@ -892,6 +933,8 @@ JSON.stringify({a: 2, b: [1, 'c']});
 JSON.parse('{"a": 2, "b": [1, "c"]}');
 ```
 
+[formal definition](http://www.json.org/json-en.html)
+
 #HSLIDE
 
 # console.log
@@ -973,6 +1016,12 @@ TODO:
 - Object.keys
 - Object.getOwnPropertyNames
 
+#HSLIDE
+
+TODO
+- store data on html elements
+- store data in html dataset
+
 # Lab
 
 TODO: cineforum interactive
@@ -997,6 +1046,8 @@ TODO
 - bootstrap
 - jquery
 - react
+- CSS preprocessors
+- HTML preprocessors
 
 #HSLIDE
 
