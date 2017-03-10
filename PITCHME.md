@@ -352,7 +352,7 @@ document.querySelectorAll("p.highlight")
 
 # Heading
 
-<h1>...<h6>
+`<h1>...<h6>`
 
 ```html
 <h1>Heading 1</h1>
