@@ -214,6 +214,187 @@ alert("hello")
 
 #HSLIDE
 
+# HTML Tags
+
+#VSLIDE
+
+# Heading
+
+```html
+<h1>Heading 1</h1>
+```
+<h1>Heading 1</h1>
+
+```html
+<h3>Heading 3</h3>
+```
+<h3>Heading 3</h3>
+
+#VSLIDE
+
+# Paragraph
+
+```html
+<p>
+  Paragraph 1
+</p>
+<p>
+  Paragraph 2
+</p>
+```
+
+<p>
+  Paragraph 1
+</p>
+<p>
+  Paragraph 2
+</p>
+
+#VSLIDE
+
+# SPAN
+
+```html
+<p>Hello<span style="color: red">red</span></p>
+```
+
+<p>Hello<span style="color: red">red</span></p>
+
+#VSLIDE
+
+# New line & Horizontal rule
+
+```html
+<p>text on<br>new line</p>
+<hr>
+<p>separated by horizontal rule</p>
+```
+
+<p>text on<br>new line</p>
+<hr>
+<p>separated by horizontal rule</p>
+
+#VSLIDE
+
+# Image
+
+```html
+<img src="https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png"/>
+```
+
+<img src="https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png"/>
+
+#VSLIDE
+
+# DIV
+
+the most used element for dividing content and layout purposes
+
+```html
+<div>
+  more content here
+</div>
+```
+
+#VSLIDE
+
+# Unordered list
+
+```html
+<ul>
+  <li>item</li>
+  <li>item</li>
+</ul>
+```
+
+<ul>
+  <li>item</li>
+  <li>item</li>
+</ul>
+
+#VSLIDE
+
+# Ordered list
+
+```html
+<ol>
+  <li>item</li>
+  <li>item</li>
+</ol>
+```
+
+<ol>
+  <li>item</li>
+  <li>item</li>
+</ol>
+
+#VSLIDE
+
+# List recap
+
+`<ol>` = ordered list
+`<ul>` = unordered list
+`<li>` = list item
+
+#VSLIDE
+
+# Anchor
+
+better know as link
+
+```html
+<a href="https://github.com/freddi301">my page</a>
+```
+
+<a href="https://github.com/freddi301">my page</a>
+
+#VSLIDE
+
+# Anchor target
+
+opens link on a named tag
+
+```html
+<a href="#" target="tab2">link</a>
+<a href="#" target="tab3">link</a>
+```
+
+<a href="#" target="tab2">link</a>
+<a href="#" target="tab3">link</a>
+
+#VSLIDE
+
+# Anchor target
+
+always open link in a new tab
+
+```html
+<a href="#" target="_blank">link</a>
+```
+
+#VSLIDE
+
+# Anchor href
+
+absolute
+```html
+<a href="https://github.com/freddi301">https://github.com/freddi301</a>
+```
+
+relative
+```html
+<a href="favicon.ico">https://gitpitch.com/freddi301/h5c3j5-course/master/favicon.ico</a>
+```
+
+page anchor (you can link to an element with specific id in a page)
+```html
+<a href="https://en.wikipedia.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy#Original_radio_series">42</a>
+```
+
+<a href="https://en.wikipedia.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy#Original_radio_series">42</a>
+
+#HSLIDE
+
 # CSS Selectors
 
 All CSS rules are in form
@@ -343,26 +524,6 @@ document.querySelectorAll("p.highlight")
 [new in CSS3](http://tutorialzine.com/2013/10/12-awesome-css3-features-you-can-finally-use/)
 
 [reference](https://www.w3schools.com/cssref/css_selectors.asp)
-
-#HSLIDE
-
-# Most used html tags
-
-#VSLIDE
-
-# Heading
-
-`<h1>...<h6>`
-
-```html
-<h1>Heading 1</h1>
-```
-<h1>Heading 1</h1>
-
-```html
-<h3>Heading 3</h3>
-```
-<h3>Heading 3</h3>
 
 #HSLIDE
 
