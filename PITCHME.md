@@ -577,7 +577,54 @@ TODO
 - table
 - display
 - flex
-- media query (responsive, chrome responsive mode)
+
+#HSLIDE
+
+# Media query
+
+```html
+<style>
+ .mediaQueryDemo {
+   background-color: purple;
+   display: inline-block;
+   height: 20px;
+ }
+@media (min-width: 400px) {
+  .mediaQueryDemo { width: 50%; }
+}
+ @media (min-width: 800px) {
+  .mediaQueryDemo { width: 24%; }
+}
+</style>
+<div class="mediaQueryDemo"></div>
+<div class="mediaQueryDemo"></div>
+<div class="mediaQueryDemo"></div>
+<div class="mediaQueryDemo"></div>
+```
+
+#VSLIDE
+
+# Responsive
+
+test in browser the responsiveness of your CSS
+
+![](https://developers.google.com/web/tools/chrome-devtools/device-mode/imgs/device-mode-initial-view.png)
+
+#VSLIDE
+
+# Mobile responsive
+
+mobile browsers needs
+
+```html
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+```
+
+because they simulate a desktop width screen
+
+[more info](https://css-tricks.com/snippets/html/responsive-meta-tag/)
 
 #HSLIDE
 
@@ -746,7 +793,7 @@ function awesome(x) {
 
 #VSLIDE
 
-# function declaration hoisting
+# function hoisting
 
 ```javascript
 function a() { return 'a' + b(); }
@@ -869,7 +916,7 @@ console.log("%cBig Red", "color: red; font-size: 50px");
 
 #HSLIDE
 
-- DOM (get/setAttribute() appendChild())
+- DOM (get/setAttribute() appendChild() style.prop, getById/class, createElement, appp/replace/removeChild)
 
 #HSLIDE
 
@@ -896,24 +943,32 @@ set breakpoints and inspect code step by step
 
 #HSLIDE
 
-# Lab
-
-TODO: cineforum interactive
-
-#HSLIDE
-
 TODO:
 - this, call()
 - prototype chain, classes
 
 #HSLIDE
 
+# Introspection
+
+TODO:
+- Object.keys
+- Object.getOwnPropertyNames
+
+# Lab
+
+TODO: cineforum interactive
+
+#HSLIDE
+
 TODO
 - falsy/truthy table
+- logical operators
 - promise
 - IIF
 - js execution model
 - ajax
+- simulate slow network/network issues
 
 #HSLIDE
 
