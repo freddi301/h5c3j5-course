@@ -143,6 +143,29 @@ style.css
 p { color: red }
 ```
 
+#VSLIDE
+
+# CSS include
+
+index.html
+```html
+<html>
+  <head>
+    <style>
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <p>Lorem Ispum</p>
+  </body>
+</html>
+```
+
+style.css
+```css
+p { color: red }
+```
+
 #HSLIDE
 
 # JavaScript
@@ -333,7 +356,9 @@ the most used element for dividing content and layout purposes
 # List recap
 
 `<ol>` = ordered list
+
 `<ul>` = unordered list
+
 `<li>` = list item
 
 #VSLIDE
@@ -355,12 +380,12 @@ better know as link
 opens link on a named tag
 
 ```html
-<a href="#" target="tab2">link</a>
-<a href="#" target="tab3">link</a>
+<a href="#" target="tab2">link2</a>
+<a href="#" target="tab3">link3</a>
 ```
 
-<a href="#" target="tab2">link</a>
-<a href="#" target="tab3">link</a>
+<a href="#" target="tab2">link2</a>
+<a href="#" target="tab3">link3</a>
 
 #VSLIDE
 
@@ -371,6 +396,8 @@ always open link in a new tab
 ```html
 <a href="#" target="_blank">link</a>
 ```
+
+<a href="#" target="_blank">link_</a>
 
 #VSLIDE
 
@@ -527,38 +554,61 @@ document.querySelectorAll("p.highlight")
 
 #HSLIDE
 
-TODO: box model
-TODO: table
-TODO: display
-TODO: flex
-TODO: media query
-
-#HSLIDE
-
-TODO: css transitions, transformations, animations
+TODO
+- box model
+- table
+- display
+- flex
+- media query
 
 #HSLIDE
 
 TODO:
-onclick
-addEventListener
-event bubbling
+- transitions
+- transformations
+- animations
+
+#HSLIDE
+
+TODO: cineforum non interactive
 
 #HSLIDE
 
 - function
+- TODO: hoisting
 - object
-- DOM
+- JSON
+- console (debug, info, log, warn, error, table, inspect clear)
+- DOM (get/setAttribute() appendChild())
 
 #HSLIDE
 
-todo: validating form
+TODO:
+- listeners
+- onclick
+- addEventListener
+- event bubbling
+
+#HSLIDE
+
+todo:
+- input
+- form (submit, action)
+- validating form
+
+#HSLIDE
+
+# Debugger
+
+set breakpoints and inspect code step by step
+
+[debugger](https://developers.google.com/web/tools/chrome-devtools/javascript/imgs/get-started-watch-expression.png)
 
 #HSLIDE
 
 # Lab
 
-TODO: cineforum
+TODO: cineforum interactive
 
 #HSLIDE
 
@@ -569,41 +619,44 @@ TODO:
 
 #HSLIDE
 
-TODO: listeners
-TODO: promise
-TODO: IIF
-TODO: js executoion model
-TODO: ajax
+TODO
+- promise
+- IIF
+- js executoion model
+- ajax
 
 #HSLIDE
 
 # Frameweroks
 
-TODO: lodash
-TODO: bootstrap
-TODO: jquery
-TODO: react
+TODO
+- lodash
+- bootstrap
+- jquery
+- react
 
 #HSLIDE
 
 # Git
 
-TODO:
-git init
-git add
-git commit
-git checkout
+TODO
+- git init
+- git add
+- git commit
+- git checkout
 
 #VSLIDE
 
-git clone
-git remote add
-git push
-git pull
-github fork
+TODO
+- git clone
+- git remote add
+- git push
+- git pull
+- github fork
 
 #VSLIDE
 
-git checkout -b
-git merge
-git rebase
+TODO
+- git checkout -b
+- git merge
+- git rebase

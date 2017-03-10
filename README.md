@@ -2,9 +2,3 @@
 
 # h5c3j5-course
 html5 css3 javascript5 course
-
-TODO: hoisting
-TODO: console
-TODO: debugger
-TODO: JSON
-TODO: display
