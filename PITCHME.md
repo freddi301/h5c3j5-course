@@ -698,9 +698,110 @@ TODO: cineforum non interactive
 
 #HSLIDE
 
-- function
-- hoisting
-- clojure
+# function
+
+```javascript
+function alertMessage(message) {
+  alert(message);
+}
+alertMessage('hello');
+```
+
+#VSLIDE
+
+# function return
+
+```javascript
+function add(x, y) { return x + y; }
+alert(add(2,3));
+
+function empty() {}
+alert(empty())
+```
+
+#VSLIDE
+
+# hoisting
+
+```javascript
+function awesome(x) {
+  var double = x * 2;
+  console.log(double);
+  var half = x / 2;
+  return double + half;
+}
+```
+
+same as
+
+```javascript
+function awesome(x) {
+  var double, half;
+  double = x * 2;
+  console.log(double);
+  half = x / 2;
+  return double + half;
+}
+```
+
+#VSLIDE
+
+# function declaration hoisting
+
+```javascript
+function a() { return 'a' + b(); }
+function b() { return 'b'; }
+console.log(a, b);
+```
+
+same as
+
+```javascript
+var a, b;
+a = function () { return 'a' + b(); }
+b = function () { return 'b'; }
+console.log(a, b);
+```
+
+#VSLIDE
+
+# shadowing
+
+```javascript
+var x = 'upper x';
+var y = "upper y";
+function shadow(x) { return x + ' - ' + y }
+console.log(x + ' - ' + y);
+console.log(shadow('inner x'));
+```
+
+#VSLIDE
+
+# function expressions
+
+```javascript
+var anonFunc = function() { return 0; }
+var nameFunc = function name () { return 'i have a name'; }
+console.log(anonFunc, anonFunc(), anonFunc.name);
+console.log(nameFunc, nameFunc(), nameFunc.name);
+```
+
+#VSLIDE
+
+# clojure
+
+```javascript
+function clojure(x) {
+  return function (y) { return x + y; }
+}
+var cx = clojure(4); console.log(cx);
+var cy = cx(6); console.log(cy);
+var cy2 = cx(4); console.log(cy2);
+console.log(clojure(2)(3));
+```
+
+#HSLIDE
+
 - object
 - JSON
 - console (debug, info, log, warn, error, table, inspect clear)
@@ -744,6 +845,7 @@ TODO:
 #HSLIDE
 
 TODO
+- falsy/truthy table
 - promise
 - IIF
 - js execution model
