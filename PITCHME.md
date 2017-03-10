@@ -589,7 +589,7 @@ TODO
 
 #VSLIDE
 
-# Transitions
+# [Transitions](http://codepen.io/anon/pen/gmmQVO)
 
 ```html
 <style>
@@ -599,7 +599,7 @@ TODO
   }
 
   div.transitionDemo:hover {
-    width: 40px; height: 40px;
+    width: 100%; height: 40px;
     background-color: blue;
     transition: all 1s;
   }
@@ -614,9 +614,10 @@ TODO
   }
 
   div.transitionDemo:hover {
-    width: 40px; height: 40px;
+    width: 100%; height: 40px;
     background-color: blue;
     transition: all 1s;
+}
   }
 </style>
 <div class="transitionDemo"></div>
@@ -625,13 +626,71 @@ TODO
 
 # Transformations
 
-todo
+```html
+<style>
+  div.transformDemo {
+    width: 20px; height: 20px;
+    background-color: red;
+    transform: translate(0px, -50px) rotate(45deg);
+  }
+</style>
+<div class="transformDemo"></div>
+```
+
+<style>
+  div.transformDemo {
+    width: 20px; height: 20px;
+    background-color: red;
+    transform: translate(0px, -50px) rotate(45deg);
+  }
+</style>
+<div class="transformDemo"></div>
 
 #VSLIDE
 
-# Animations
+# [Animations](http://codepen.io/anon/pen/ZeeVXo)
 
-todo
+```html
+<style>
+  @keyframes example {
+    0%   {background-color:red; left:0px; top:0px; transform: rotate(360deg);}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+  div.animationDemo {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+</style>
+<div class="animationDemo"></div>
+```
+
+<style>
+  @keyframes example {
+    0%   {background-color:red; left:0px; top:0px; transform: rotate(360deg);}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+  div.animationDemo {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+</style>
+<div class="animationDemo"></div>
 
 #HSLIDE
 
