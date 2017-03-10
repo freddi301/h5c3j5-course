@@ -346,7 +346,23 @@ document.querySelectorAll("p.highlight")
 
 #HSLIDE
 
-TODO: most used html tags
+# Most used html tags
+
+#VSLIDE
+
+# Heading
+
+<h1>...<h6>
+
+```html
+<h1>Heading 1</h1>
+```
+<h1>Heading 1</h1>
+
+```html
+<h3>Heading 3</h3>
+```
+<h3>Heading 3</h3>
 
 #HSLIDE
 
