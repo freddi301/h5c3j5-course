@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>h5c3j5-course</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.6.3/showdown.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/agate.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/css.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/javascript.min.js"></script>
+    <script type="text/javascript">
+      function parseQuery(qstr) {
+        var query = {};
+        var a = (qstr[0] === '?' ? qstr.substr(1) : qstr).split('&');
+        for (var i = 0; i < a.length; i++) {
+            var b = a[i].split('=');
+            query[decodeURIComponent(b[0])] = decodeURIComponent(b[1] || '');
+        }
+        return query;
+      }
+      function updateQueryStringParameter(uri, key, value) {
+        var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
+        var separator = uri.indexOf('?') !== -1 ? "&" : "?";
+        if (uri.match(re)) {
+          return uri.replace(re, '$1' + key + "=" + value + '$2');
+        }
+        else {
+          return uri + separator + key + "=" + value;
+        }
+      }
+      const query = parseQuery(location.search);
+      var show;
+      const converter = new showdown.Converter();
+      converter.setFlavor('github');
+      fetch(query.file || 'PITCHME.md').then(res => res.text())
+      .then(text => {
+        show = {
+          slides: text.split("\n---\n").map(topics => topics.split('\n+++\n')),
+          pos: { h: parseInt(query.h) || 0, v: parseInt(query.v) || 0 }, query,
+          next(){ if (!this.hasNext()) return; this.pos.h += 1; this.pos.v = 0; this.setSlideContent(); this.setQueryString(); },
+          hasNext(){ return !!this.slides[this.pos.h + 1]; },
+          down(){ if (!this.hasDown()) return; this.pos.v += 1; this.setSlideContent(); this.setQueryString(); },
+          hasDown(){ return !!this.slides[this.pos.h][this.pos.v + 1]; },
+          up(){ if (!this.hasUp()) return; this.pos.v -= 1; this.setSlideContent(); this.setQueryString(); },
+          hasUp(){ return !!this.slides[this.pos.h][this.pos.v - 1]; },
+          prev(){ if (!this.hasPrev()) return; this.pos.h -= 1; this.pos.v = 0; this.setSlideContent(); this.setQueryString(); },
+          hasPrev(){ return !!this.slides[this.pos.h - 1]; },
+          setSlideContent(){
+            document.getElementById('h5c3j5slide').innerHTML = converter.makeHtml(this.slides[this.pos.h][this.pos.v]);
+            document.querySelectorAll('pre code').forEach(block => hljs.highlightBlock(block));
+            this.setArrows();
+          },
+          setArrows() {
+            document.getElementById('h5c3j5slideArrowPrev').disabled = !this.hasPrev();
+            document.getElementById('h5c3j5slideArrowNext').disabled = !this.hasNext();
+            document.getElementById('h5c3j5slideArrowUp').disabled = !this.hasUp();
+            document.getElementById('h5c3j5slideArrowDown').disabled = !this.hasDown();
+          },
+          setQueryString() {
+            const h = updateQueryStringParameter(location.href, 'h', this.pos.h);
+            const v = updateQueryStringParameter(h, 'v', this.pos.v);
+            history.pushState({ h: this.pos.h, v: this.pos.v }, null, v);
+          }
+        };
+        window.onpopstate = event => {
+          show.pos.h = event.state.h;
+          show.pos.v = event.state.v;
+          show.setSlideContent();
+        };
+        show.setSlideContent();
+      })
+    </script>
+    <style>
+      body {
+        background-color: rgb(34, 34, 34);
+        color: white;
+        font-family: 'Roboto', sans-serif;
+      }
+      div#h5c3j5slideContainer {
+        width: 100%;
+        height: 100%;
+      }
+      div#h5c3j5slide {
+        margin: auto auto;
+        padding-left: 10%;
+        padding-right: 10%;
+      }
+      div#h5c3j5slide p,h1,h2,h3,h4,h5,h6 {
+        text-align: center;
+      }
+      div#h5c3j5slide a {
+        color: #42affa;
+        text-decoration: none;
+      }
+      div#h5c3j5slideArrows {
+        position: fixed;
+        right: 0px;
+        bottom: 0px;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="h5c3j5slideContainer">
+      <div id="h5c3j5slide"></div>
+    </div>
+    <div id="h5c3j5slideArrows">
+      <input id="h5c3j5slideArrowPrev" type="button" value="<" onclick="show.prev()"/>
+      <input id="h5c3j5slideArrowDown" type="button" value="v" onclick="show.down()"/>
+      <input id="h5c3j5slideArrowUp" type="button" value="^" onclick="show.up()"/>
+      <input id="h5c3j5slideArrowNext" type="button" value=">" onclick="show.next()"/>
+    </div>
+  </body>
+</html>
