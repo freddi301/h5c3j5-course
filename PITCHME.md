@@ -2,7 +2,7 @@
 # CSS3
 # JavaScript ES5
 
-#HSLIDE
+---
 
 # The tools
 
@@ -12,7 +12,7 @@ Text Editor - [Atom](https://atom.io/)
 
 Versioning - [Git](https://git-scm.com/)
 
-#HSLIDE
+---
 
 # HTML
 
@@ -22,7 +22,7 @@ Declarative
 
 [WikiPedia](https://en.wikipedia.org/wiki/HTML)
 
-#VSLIDE
++++
 
 ## HTML4
 
@@ -42,13 +42,13 @@ Declarative
 </html>
 ```
 
-#VSLIDE
++++
 
 HTML is not a rigid format, it allows errors and incomplete information
 
 HTML4 is supported on every browser, HTML5 support vary by browser and behaviour may change also.
 
-#VSLIDE
++++
 
 ## [HTML5](http://www.developer.com/lang/understanding-the-proper-way-to-lay-out-a-page-with-html5.html)
 
@@ -75,11 +75,11 @@ HTML4 is supported on every browser, HTML5 support vary by browser and behaviour
 </html>
 ```
 
-#VSLIDE
++++
 
 ![Layout](http://www.developer.com/imagesvr_ce/3977/Figure01.png)
 
-#VSLIDE
++++
 
 # [HTML5 features](https://code.tutsplus.com/tutorials/28-html5-features-tips-and-techniques-you-must-know--net-13520)
 
@@ -87,7 +87,7 @@ HTML4 is supported on every browser, HTML5 support vary by browser and behaviour
 - [http://html5gallery.com/](http://html5gallery.com/)
 - [http://html5-showcase.com/](http://html5-showcase.com/)
 
-#HSLIDE
+---
 
 # CSS (Cascading Style Sheet)
 
@@ -97,7 +97,7 @@ Declarative
 
 [WikiPedia](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 
-#VSLIDE
++++
 
 # Inline Style
 
@@ -105,7 +105,7 @@ Declarative
 <p style="color: red">Lorem Ispum</p>
 ```
 
-#VSLIDE
++++
 
 # Included in html
 
@@ -122,7 +122,7 @@ Declarative
 </html>
 ```
 
-#VSLIDE
++++
 
 # [Separate File](https://github.com/freddi301/h5c3j5-course/blob/master/examples/includeCss)
 
@@ -143,7 +143,7 @@ style.css
 p { color: red }
 ```
 
-#VSLIDE
++++
 
 # CSS include
 
@@ -166,7 +166,7 @@ style.css
 p { color: red }
 ```
 
-#VSLIDE
++++
 
 Not all browser supports css and behave consistently
 
@@ -174,7 +174,7 @@ You have to use [normalize.css](https://necolas.github.io/normalize.css/)
 
 and add [prefixes](https://autoprefixer.github.io/) for transitions for example
 
-#HSLIDE
+---
 
 # JavaScript
 
@@ -185,7 +185,7 @@ and add [prefixes](https://autoprefixer.github.io/) for transitions for example
 
 [WikiPedia](https://en.wikipedia.org/wiki/JavaScript)
 
-#VSLIDE
++++
 
 # in dev console
 
@@ -195,7 +195,7 @@ Chrome -> options -> dev tools -> console
 alert("hello world")
 ```
 
-#VSLIDE
++++
 
 # html inline
 
@@ -203,7 +203,7 @@ alert("hello world")
 <button onclick="alert('hello')"></button>
 ```
 
-#VSLIDE
++++
 
 # html tag
 
@@ -217,7 +217,7 @@ alert("hello world")
 </html>
 ```
 
-#VSLIDE
++++
 
 # external script
 
@@ -235,7 +235,7 @@ script.js
 alert("hello")
 ```
 
-#VSLIDE
++++
 
 Not every browser supports every feature of javascript
 
@@ -245,7 +245,7 @@ You might need to use
 - [polyfills](https://remysharp.com/2010/10/08/what-is-a-polyfill)
 - [transpilers](https://babeljs.io/)
 
-#VSLIDE
++++
 
 # Books
 
@@ -253,7 +253,7 @@ You might need to use
 - [JavaScript The Good Parts](http://bdcampbell.net/javascript/book/javascript_the_good_parts.pdf)
 - [YDKJS](https://github.com/getify/You-Dont-Know-JS)
 
-#HSLIDE
+---
 
 # Compatibility Recap
 
@@ -263,11 +263,11 @@ always check that they work on all target browsers
 
 [can i use](http://caniuse.com/) is a good reference
 
-#HSLIDE
+---
 
 # HTML Tags
 
-#VSLIDE
++++
 
 # Heading
 
@@ -281,7 +281,7 @@ always check that they work on all target browsers
 ```
 <h3>Heading 3</h3>
 
-#VSLIDE
++++
 
 # Paragraph
 
@@ -301,7 +301,7 @@ always check that they work on all target browsers
   Paragraph 2
 </p>
 
-#VSLIDE
++++
 
 # SPAN
 
@@ -311,7 +311,7 @@ always check that they work on all target browsers
 
 <p>Hello<span style="color: red">red</span></p>
 
-#VSLIDE
++++
 
 # New line & Horizontal rule
 
@@ -325,7 +325,7 @@ always check that they work on all target browsers
 <hr>
 <p>separated by horizontal rule</p>
 
-#VSLIDE
++++
 
 # Image
 
@@ -335,7 +335,7 @@ always check that they work on all target browsers
 
 <img src="https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png" style="width: 100px"/>
 
-#VSLIDE
++++
 
 # DIV
 
@@ -347,7 +347,7 @@ the most used element for dividing content and layout purposes
 </div>
 ```
 
-#VSLIDE
++++
 
 # Unordered list
 
@@ -363,7 +363,7 @@ the most used element for dividing content and layout purposes
   <li>item</li>
 </ul>
 
-#VSLIDE
++++
 
 # Ordered list
 
@@ -379,7 +379,7 @@ the most used element for dividing content and layout purposes
   <li>item</li>
 </ol>
 
-#VSLIDE
++++
 
 # List recap
 
@@ -389,7 +389,7 @@ the most used element for dividing content and layout purposes
 
 `<li>` = list item
 
-#VSLIDE
++++
 
 # Anchor
 
@@ -401,7 +401,7 @@ better know as link
 
 <a href="https://github.com/freddi301">my page</a>
 
-#VSLIDE
++++
 
 # Anchor target
 
@@ -415,7 +415,7 @@ opens link on a named tag
 <a href="#" target="tab2">link2</a>
 <a href="#" target="tab3">link3</a>
 
-#VSLIDE
++++
 
 # Anchor target
 
@@ -427,7 +427,7 @@ always open link in a new tab
 
 <a href="#" target="_blank">link_</a>
 
-#VSLIDE
++++
 
 # Anchor href
 
@@ -448,7 +448,7 @@ page anchor (you can link to an element with specific id in a page)
 
 <a href="https://en.wikipedia.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy#Original_radio_series">42</a>
 
-#HSLIDE
+---
 
 # CSS Selectors
 
@@ -461,7 +461,7 @@ slecetor {
 
 The most specific rules applies
 
-#VSLIDE
++++
 
 element selector
 ```css
@@ -487,7 +487,7 @@ id selector
 <p id="par">hello</p>
 ```
 
-#VSLIDE
++++
 
 multiple selector
 ```css
@@ -518,7 +518,7 @@ div>p { color: blue }
 </div>
 ```
 
-#VSLIDE
++++
 
 attribute selector
 ```css
@@ -546,7 +546,7 @@ p::after {
 <p>mLorem ipsum</p>
 ```
 
-#VSLIDE
++++
 
 combined selectors
 ```css
@@ -558,7 +558,7 @@ override properties (if do not want to write too specific selector)
 a { background-color: red !important; }
 ```
 
-#VSLIDE
++++
 
 in javascript you can select elements by css selector
 
@@ -572,7 +572,7 @@ get all
 document.querySelectorAll("p.highlight")
 ```
 
-#VSLIDE
++++
 
 [reccomended](https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048)
 
@@ -580,14 +580,14 @@ document.querySelectorAll("p.highlight")
 
 [reference](https://www.w3schools.com/cssref/css_selectors.asp)
 
-#HSLIDE
+---
 
 TODO
 - box model
 - table
 - display
 
-#HSLIDE
+---
 
 # flex
 
@@ -619,7 +619,7 @@ CSS3 feature, allows subdividing space and [lot more](https://css-tricks.com/sni
   <div class="flex-1" style="background-color: red"></div>
 </div>
 
-#HSLIDE
+---
 
 # Media query
 
@@ -661,7 +661,7 @@ CSS3 feature, allows subdividing space and [lot more](https://css-tricks.com/sni
 <div class="mediaQueryDemo"></div>
 <div class="mediaQueryDemo"></div>
 
-#VSLIDE
++++
 
 # Responsive
 
@@ -669,7 +669,7 @@ test in browser the responsiveness of your CSS
 
 ![](https://developers.google.com/web/tools/chrome-devtools/device-mode/imgs/device-mode-initial-view.png)
 
-#VSLIDE
++++
 
 # Mobile responsive
 
@@ -685,7 +685,7 @@ because they simulate a desktop width screen
 
 [more info](https://css-tricks.com/snippets/html/responsive-meta-tag/)
 
-#HSLIDE
+---
 
 # CSS The moving parts
 
@@ -693,7 +693,7 @@ because they simulate a desktop width screen
 - transformations
 - animations
 
-#VSLIDE
++++
 
 # [Transitions](http://codepen.io/anon/pen/gmmQVO)
 
@@ -728,7 +728,7 @@ because they simulate a desktop width screen
 </style>
 <div class="transitionDemo"></div>
 
-#VSLIDE
++++
 
 # Transformations
 
@@ -752,7 +752,7 @@ because they simulate a desktop width screen
 </style>
 <div class="transformDemo"></div>
 
-#VSLIDE
++++
 
 # [Animations](http://codepen.io/anon/pen/ZeeVXo)
 
@@ -798,11 +798,11 @@ because they simulate a desktop width screen
 </style>
 <div class="animationDemo"></div>
 
-#HSLIDE
+---
 
 TODO: cineforum non interactive
 
-#HSLIDE
+---
 
 # function
 
@@ -813,7 +813,7 @@ function alertMessage(message) {
 alertMessage('hello');
 ```
 
-#VSLIDE
++++
 
 # function return
 
@@ -825,7 +825,7 @@ function empty() {}
 alert(empty())
 ```
 
-#VSLIDE
++++
 
 # hoisting
 
@@ -850,7 +850,7 @@ function awesome(x) {
 }
 ```
 
-#VSLIDE
++++
 
 # function hoisting
 
@@ -869,7 +869,7 @@ b = function () { return 'b'; }
 console.log(a, b);
 ```
 
-#VSLIDE
++++
 
 # shadowing
 
@@ -881,7 +881,7 @@ console.log(x + ' - ' + y);
 console.log(shadow('inner x'));
 ```
 
-#VSLIDE
++++
 
 # function expressions
 
@@ -892,7 +892,7 @@ console.log(anonFunc, anonFunc(), anonFunc.name);
 console.log(nameFunc, nameFunc(), nameFunc.name);
 ```
 
-#VSLIDE
++++
 
 # clojure
 
@@ -906,7 +906,7 @@ var cy2 = cx(4); console.log(cy2);
 console.log(clojure(2)(3));
 ```
 
-#HSLIDE
+---
 
 # object literal
 
@@ -921,7 +921,7 @@ console.log(obj.a);
 console.log(obj.b.c[0]);
 ```
 
-#VSLIDE
++++
 
 # JSON
 
@@ -935,7 +935,7 @@ JSON.parse('{"a": 2, "b": [1, "c"]}');
 
 [formal definition](http://www.json.org/json-en.html)
 
-#HSLIDE
+---
 
 # console.log
 
@@ -950,7 +950,7 @@ console.error('some fatal error occurred');
 console.clear(); // clear console;
 ```
 
-#VSLIDE
++++
 
 # console debugging utils
 
@@ -962,7 +962,7 @@ console.time('event1'); console.timeEnd('event1'); // display time passed
 console.group('more log'); console.log(1); console.log('hello'); console.groupEnd('more log');
 ```
 
-#VSLIDE
++++
 
 # console display utils
 
@@ -975,11 +975,11 @@ console.table([
 console.log("%cBig Red", "color: red; font-size: 50px");
 ```
 
-#HSLIDE
+---
 
 - DOM (get/setAttribute() appendChild() style.prop, getById/class, createElement, appp/replace/removeChild)
 
-#HSLIDE
+---
 
 TODO:
 - listeners
@@ -987,14 +987,14 @@ TODO:
 - addEventListener
 - event bubbling
 
-#HSLIDE
+---
 
 todo:
 - input
 - form (submit, action)
 - validating form
 
-#HSLIDE
+---
 
 # Debugger
 
@@ -1002,13 +1002,13 @@ set breakpoints and inspect code step by step
 
 ![debugger](https://developers.google.com/web/tools/chrome-devtools/javascript/imgs/get-started-watch-expression.png)
 
-#HSLIDE
+---
 
 TODO:
 - this, call()
 - prototype chain, classes
 
-#HSLIDE
+---
 
 # Introspection
 
@@ -1018,19 +1018,19 @@ TODO:
 - Object.keys
 - Object.getOwnPropertyNames
 
-#HSLIDE
+---
 
 TODO
 - store data on html elements
 - store data in html dataset
 
-#HSLIDE
+---
 
 # Lab
 
 TODO: cineforum interactive
 
-#HSLIDE
+---
 
 TODO
 - falsy/truthy table
@@ -1041,7 +1041,7 @@ TODO
 - ajax
 - simulate slow network/network issues
 
-#HSLIDE
+---
 
 # Frameweroks
 
@@ -1053,7 +1053,7 @@ TODO
 - CSS preprocessors
 - HTML preprocessors
 
-#HSLIDE
+---
 
 # Git
 
@@ -1063,14 +1063,14 @@ TODO
 - git commit
 - git checkout
 
-#VSLIDE
++++
 
 TODO
 - git checkout -b
 - git merge
 - git rebase -i HEAD~3
 
-#VSLIDE
++++
 
 TODO
 - git clone
