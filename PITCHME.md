@@ -492,11 +492,79 @@ used for code snippets
 
 +++
 
-TODO: checkbox
+# checkbox
+
+```html
+<form>
+  <fieldset>
+    <legend>Known languages</legend><br>
+    <input type="checkbox" name="html" value="html"/>html<br />
+    <input type="checkbox" name="css" value="css"/>css<br />
+    <input type="checkbox" name="javascript" value="javascript"/>JavaScript
+  </fieldset>
+</form>
+```
+
+<form>
+  <fieldset>
+    <legend>Known languages</legend><br>
+    <input type="checkbox" name="html" value="html"/>html<br />
+    <input type="checkbox" name="css" value="css"/>css<br />
+    <input type="checkbox" name="javascript" value="javascript"/>JavaScript
+  </fieldset>
+</form>
 
 +++
 
-TODO: radio
+# radio
+
+```html
+<form>
+  <fieldset>
+    <legend>Known Languages</legend>
+    <input type="radio" name="linguaggio" value="html"/>html<br />
+    <input type="radio" name="linguaggio" value="css"/>css<br />
+    <input type="radio" name="linguaggio" value="javascript"/>JavaScript
+  </fieldset>
+</form>
+```
+
+<form>
+  <fieldset>
+    <legend>Known Languages</legend>
+    <input type="radio" name="linguaggio" value="html"/>html<br />
+    <input type="radio" name="linguaggio" value="css"/>css<br />
+    <input type="radio" name="linguaggio" value="javascript"/>JavaScript
+  </fieldset>
+</form>
+
++++
+
+# select
+
+```html
+<form>
+  <select>
+    <option value="html">HTML</option>
+    <option value="css">CSS</option>
+    <optgroup label="JavaScript">
+      <option value="es2015">es2015</option>
+      <option value="es2016">es2016</option>
+    </optgroup>
+  </select>
+</form>
+```
+
+<form>
+  <select>
+    <option value="html">HTML</option>
+    <option value="css">CSS</option>
+    <optgroup label="JavaScript">
+      <option value="es2015">es2015</option>
+      <option value="es2016">es2016</option>
+    </optgroup>
+  </select>
+</form>
 
 +++
 
