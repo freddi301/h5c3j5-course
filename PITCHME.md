@@ -937,7 +937,15 @@ An element with position: relative; is positioned relative to its normal positio
 
 Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.
 
-TODE
+```html
+<div style="position: relative; top: 50px; left: 50px; background-color: orange;">
+  relative position element
+</div>
+```
+
+<div style="position: relative; top: 50px; left: 50px; background-color: orange;">
+  relative position element
+</div>
 
 +++
 
@@ -947,7 +955,17 @@ An element with position: fixed; is positioned relative to the viewport, which m
 
 A fixed element does not leave a gap in the page where it would normally have been located.
 
-TODE
+```html
+<div style="position: fixed; top: 0px; left: 0px; background-color: orange;">
+  fixed position element
+</div>
+```
+
+<div style="position: fixed; top: 0px; left: 0px; background-color: orange;">
+  fixed position element
+</div>
+
++++
 
 # position: absolute
 
@@ -955,7 +973,16 @@ An element with position: absolute; is positioned relative to the nearest positi
 
 However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.
 
-TODE
+```html
+<div style="position: absolute; top: 50px; left: 50px; background-color: orange;">
+  absolute position element
+</div>
+```
+
+<div style="position: absolute; top: 50px; left: 50px; background-color: orange;">
+  absolute position element
+</div>
+
 ---
 
 # Media query
