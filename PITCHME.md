@@ -568,7 +568,46 @@ used for code snippets
 
 +++
 
-TODO: table
+# table
+
+```html
+<style>
+  table { border-collapse: collapse; }
+  table, th, td { border: 1px solid white; padding: 5px; }
+</style>
+<table>
+  <caption>table demo</caption>
+  <thead>
+    <tr><th>name</th><th>age</th><th>more info</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>fred</td><td>42</td><td>developer</td></tr>
+    <tr><td colspan="2">old ted</td><td rowspan="2">teacher</td></tr>
+    <tr><td>ned</td><td>42</td></tr>
+  </tbody>
+  <tfoot>
+    <tr><td>name</td><td>age</td><td>more info</td></tr>
+  </tfoot>
+</table>
+```
+<style>
+  table { border-collapse: collapse; }
+  table, th, td { border: 1px solid white; padding: 5px; }
+</style>
+<table>
+  <caption>table demo</caption>
+  <thead>
+    <tr><th>name</th><th>age</th><th>more info</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>fred</td><td>42</td><td>developer</td></tr>
+    <tr><td colspan="2">old ted</td><td rowspan="2">teacher</td></tr>
+    <tr><td>ned</td><td>42</td></tr>
+  </tbody>
+  <tfoot>
+    <tr><td>name</td><td>age</td><td>more info</td></tr>
+  </tfoot>
+</table>
 
 ---
 
