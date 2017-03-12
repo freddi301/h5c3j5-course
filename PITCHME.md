@@ -448,6 +448,48 @@ page anchor (you can link to an element with specific id in a page)
 
 <a href="https://en.wikipedia.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy#Original_radio_series">42</a>
 
++++
+
+# pre
+
+maintains spacing
+
+```html
+<pre>
+  Space preserving
+  text
+</pre>
+```
+
+<pre>
+  Space preserving
+  text
+</pre>
+
++++
+
+# code
+
+used for code snippets
+
+```html
+<pre>
+  <code>
+    function helloWorld() {
+      console.log('hello world!');
+    }
+  </code>
+</pre>
+```
+
+<pre>
+  <code>
+    function helloWorld() {
+      console.log('hello world!');
+    }
+  </code>
+</pre>
+
 ---
 
 # CSS Selectors
