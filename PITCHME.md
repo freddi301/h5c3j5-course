@@ -917,7 +917,31 @@ CSS3 feature, allows subdividing space and [lot more](https://css-tricks.com/sni
 
 ---
 
-TODO: border radiues, shadow
+# border-radius + box-shadow
+
+```html
+<div style="border-radius: 25px; box-shadow: 10px 10px 5px #888888;">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In volutpat, metus dapibus lobortis aliquam, nunc erat consectetur lacus, nec euismod ipsum massa sit amet mauris
+</div>
+```
+
+<div style="border-radius: 25px; box-shadow: 10px 10px 5px #888888; background-color: blue; padding: 1em;">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In volutpat, metus dapibus lobortis aliquam, nunc erat consectetur lacus, nec euismod ipsum massa sit amet mauris
+</div>
+
+---
+
+# CSS units
+
+the most used length units are:
+- percentile `100%`
+- pixels `100px`
+
+other useful units:
+- cm `2cm` centimeters
+- em `2em` Relative to the font-size of the element (2em means 2 times the size of the current font)
+
+[Reference](https://www.w3schools.com/cssref/css_units.asp)
 
 ---
 
