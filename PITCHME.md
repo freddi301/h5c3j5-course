@@ -582,14 +582,38 @@ document.querySelectorAll("p.highlight")
 
 ---
 
+# Box Model
+
+```html
+<div style="margin: 20px; border: 5px solid blue; padding: 20px;">
+  hello
+</div>
+```
+
+<div style="margin: 20px; border: 5px solid blue; padding: 20px;">
+  hello
+</div>
+
+![box model](/examples/boxmodel.png)
+
++++
+
+# box sizing
+
+### { box-sizing: content-box }
+Default. The width and height properties (and min/max properties) includes only the content. Border, padding, or margin are not included
+
+### { box-sizing: border-box }
+The width and height properties (and min/max properties) includes content, padding and border, but not the margin
+
+---
+
 TODO
-- box model
-- table
 - display
 
 ---
 
-# flex
+# display: flex
 
 CSS3 feature, allows subdividing space and [lot more](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 

@@ -29,6 +29,7 @@
           return uri + separator + key + "=" + value;
         }
       }
+      function getTitle(text) { return text.slice(3, text.indexOf('\n', 2)); }
       const query = parseQuery(location.search);
       var show;
       const converter = new showdown.Converter();
@@ -47,7 +48,8 @@
           prev(){ if (!this.hasPrev()) return; this.pos.h -= 1; this.pos.v = 0; this.setSlideContent(); this.setQueryString(); },
           hasPrev(){ return !!this.slides[this.pos.h - 1]; },
           setSlideContent(){
-            document.getElementById('h5c3j5slide').innerHTML = converter.makeHtml(this.slides[this.pos.h][this.pos.v]);
+            this.text = this.slides[this.pos.h][this.pos.v];
+            document.getElementById('h5c3j5slide').innerHTML = converter.makeHtml(this.text);
             document.querySelectorAll('pre code').forEach(block => hljs.highlightBlock(block));
             this.setArrows();
           },
@@ -60,7 +62,8 @@
           setQueryString() {
             const h = updateQueryStringParameter(location.href, 'h', this.pos.h);
             const v = updateQueryStringParameter(h, 'v', this.pos.v);
-            history.pushState({ h: this.pos.h, v: this.pos.v }, null, v);
+            history.pushState({ h: this.pos.h, v: this.pos.v }, getTitle(this.text), v);
+            document.title = getTitle(this.text);
           }
         };
         window.onpopstate = event => {
@@ -69,6 +72,7 @@
           show.setSlideContent();
         };
         show.setSlideContent();
+        show.setQueryString();
       })
     </script>
     <style>
