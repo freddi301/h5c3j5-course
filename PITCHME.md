@@ -650,8 +650,119 @@ The width and height properties (and min/max properties) includes content, paddi
 
 ---
 
-TODO
-- display
+# display
+
+the CSS **display** attribute rules the all the elements layout
+
+every tag has it's own initial display attribute
+
+the display attribute can be altered, every tag can appear as any else
+
++++
+
+# `{ display: none; }`
+
+the element won't be displayed
+
+```html
+<p>
+  Lorem
+  <div style="display: none;">
+    Carpe Diem
+  </div>
+  Ipsum
+</p>
+```
+
+<p>
+  Lorem
+  <div style="display: none;">
+    Carpe Diem
+  </div>
+  Ipsum
+</p>
+
++++
+
+# `{ display: inline; }`
+
+the element will be inline with text, like a `<span>`
+
+```html
+<p>
+  Lorem
+  <div style="display: inline;">
+    Carpe Diem
+  </div>
+  Ipsum
+</p>
+```
+
+<p>
+  Lorem
+  <div style="display: inline;">
+    Carpe Diem
+  </div>
+  Ipsum
+</p>
+
++++
+
+# `{ display: block; }`
+
+the element will take all the horizontal space, like a `<div>`
+
+```html
+<p>
+  Lorem
+  <span style="display: block;">
+    Carpe Diem
+  </span>
+  Ipsum
+</p>
+```
+
+<p>
+  Lorem
+  <span style="display: block;">
+    Carpe Diem
+  </span>
+  Ipsum
+</p>
+
++++
+
+# `{ display: inline-block; }`
+
+the element will have a rectangular shape but won't take all horizontal space
+
+```html
+<p>
+  Lorem
+  <span style="display: inline-block;">
+    Carpe Diem
+  </span>
+  Ipsum
+</p>
+```
+
+<p>
+  Lorem
+  <span style="display: inline-block;">
+    Carpe Diem
+  </span>
+  Ipsum
+</p>
+
++++
+
+# References
+
+be sure to skim all the possible values
+
+[w3schools](https://www.w3schools.com/cssref/pr_class_display.asp)
+[MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
+[css-tricks](https://css-tricks.com/almanac/properties/d/display/)
 
 ---
 
