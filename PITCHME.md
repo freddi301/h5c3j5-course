@@ -490,6 +490,18 @@ used for code snippets
   </code>
 </pre>
 
++++
+
+TODO: checkbox
+
++++
+
+TODO: radio
+
++++
+
+TODO: table
+
 ---
 
 # CSS Selectors
@@ -766,6 +778,10 @@ be sure to skim all the possible values
 
 ---
 
+TODO: css position absolute, relative, fixed
+
+---
+
 # display: flex
 
 CSS3 feature, allows subdividing space and [lot more](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
@@ -795,6 +811,10 @@ CSS3 feature, allows subdividing space and [lot more](https://css-tricks.com/sni
   <div class="flex-2" style="background-color: orange"></div>
   <div class="flex-1" style="background-color: red"></div>
 </div>
+
+---
+
+TODO: border radiues, shadow
 
 ---
 
@@ -977,7 +997,9 @@ because they simulate a desktop width screen
 
 ---
 
-TODO: cineforum non interactive
+# LAB
+
+Create a non-interactive single page "Moovie Database" site
 
 ---
 
@@ -1179,7 +1201,7 @@ name == 'text user typed in'
 
 ---
 
-- DOM (get/setAttribute() appendChild() style.prop, getById/class, createElement, appp/replace/removeChild)
+- TODO DOM (get/setAttribute() appendChild() style.prop, getById/class, createElement, appp/replace/removeChild)
 
 ---
 
@@ -1231,6 +1253,26 @@ TODO
 # Lab
 
 TODO: cineforum interactive
+
+---
+
+# HTML5 more features
+
+TODO:
+- open Tags
+- autoclose Tags
+- no "" in attribute
+- attribute default value
+- <style>
+- <script>
+- <meta charset="utf-8">
+- <canvas> + examples
+- <video>
+- <audio>
+- gealocation
+- drag & drop
+- new tag meanings
+- accessibility, aria tags
 
 ---
 
