@@ -1043,6 +1043,31 @@ console.log("%cBig Red", "color: red; font-size: 50px");
 
 ---
 
+# alert confirm prompt
+
+these functions block javascript execution
+
+they are not reccomended, but are handy for prototyping
+
+```javascript
+alert('some message');
+```
+
+```javascript
+var isConfirmed = confirm('confirm this message');
+isConfirmed == true // if user pressed OK
+isConfirmed == false // otherwise
+```
+
+```javascript
+var name = prompt('type yout name', 'no name typed in');
+name == null // if user pressed Cancel
+name == '' // if user pressed OK without writing
+name == 'text user typed in'
+```
+
+---
+
 - DOM (get/setAttribute() appendChild() style.prop, getById/class, createElement, appp/replace/removeChild)
 
 ---
