@@ -917,15 +917,30 @@ CSS3 feature, allows subdividing space and [lot more](https://css-tricks.com/sni
 
 ---
 
-# border-radius + box-shadow
+# border-radius + box-shadow + gradients
 
 ```html
-<div style="border-radius: 25px; box-shadow: 10px 10px 5px #888888;">
+<style>
+  div.showcase-br-bs-gr {
+    border-radius: 25px;
+    box-shadow: 10px 10px 5px #888888;
+    background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+    padding: 1em;
+  }
+</style>
+<div class="showcase-br-bs-gr">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. In volutpat, metus dapibus lobortis aliquam, nunc erat consectetur lacus, nec euismod ipsum massa sit amet mauris
 </div>
 ```
-
-<div style="border-radius: 25px; box-shadow: 10px 10px 5px #888888; background-color: blue; padding: 1em;">
+<style>
+  div.showcase-br-bs-gr {
+    border-radius: 25px;
+    box-shadow: 10px 10px 5px #888888;
+    background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+    padding: 1em;
+  }
+</style>
+<div class="showcase-br-bs-gr">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. In volutpat, metus dapibus lobortis aliquam, nunc erat consectetur lacus, nec euismod ipsum massa sit amet mauris
 </div>
 
