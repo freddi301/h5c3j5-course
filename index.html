@@ -30,11 +30,30 @@
         }
       }
       function getTitle(text) { return text.slice(3, text.indexOf('\n', 2)); }
+      function fetchMarkdown(url) {
+        return fetch(url).then(res => res.text())
+        .then(text => {
+          const index = text.indexOf('\n---?include=');
+          if (~index) {
+            const endIndex = text.indexOf('\n', index + 1);
+            const path = text.substring(index, endIndex).replace('\n---?include=', '');
+            return fetchMarkdown(path)
+            .then(includeText => {
+              return text.substring(0, index) +
+              '\n---\n' +
+              includeText +
+              '\n' +
+              text.substring(endIndex);
+            })
+          }
+          return text;
+        })
+      }
       const query = parseQuery(location.search);
       var show;
       const converter = new showdown.Converter();
       converter.setFlavor('github');
-      fetch(query.file || 'PITCHME.md').then(res => res.text())
+      fetchMarkdown(query.file || 'PITCHME.md')
       .then(text => {
         show = {
           slides: text.split("\n---\n").map(topics => topics.split('\n+++\n')),

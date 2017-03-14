@@ -1405,9 +1405,7 @@ name == '' // if user pressed OK without writing
 name == 'text user typed in'
 ```
 
----
-
-- TODO DOM (get/setAttribute() appendChild() style.prop, getById/class, createElement, appp/replace/removeChild)
+---?include=slides/DOM.md
 
 ---
 
@@ -1475,10 +1473,11 @@ TODO:
 - <canvas> + examples
 - <video>
 - <audio>
-- gealocation
+- geolocation
 - drag & drop
 - new tag meanings
 - accessibility, aria tags
+- web worker
 
 ---
 
@@ -1494,7 +1493,7 @@ TODO
 ---
 
 TODO
-- location, history, location
+- location, history, window, navigator
 
 ---
 
