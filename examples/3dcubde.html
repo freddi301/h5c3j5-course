@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      @keyframes casca-il-mondo {
+        from { transform: translateZ(-150px) rotateY(0deg); }
+        to { transform: translateZ(-150px) rotateY(360deg); }
+      }
+      div.container {
+        width: 300px;
+        height: 300px;
+        position: relative;
+        perspective: 1000px;
+      }
+      div.cube {
+        transition: transform 1s;
+        transform-style: preserve-3d;
+        transform: translateZ(-150px);
+        animation-name: casca-il-mondo;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+      div.cube:hover {
+        transform: translateZ(-150px) rotateX(5deg);
+      }
+      div.cube:active {
+        transform: scale3d(1.05, 1.05, 0.5) translateZ(-150px);
+      }
+      div.cube-face {
+        width: 300px;
+        height: 300px;
+        position: absolute;
+      }
+      div.cube-face-1 {
+        background-color: rgba(0, 0, 255, 0.5);
+        transform: rotateY(0deg) translateZ(150px);
+      }
+      div.cube-face-2 {
+        background-color: rgba(255, 0, 0, 0.5);
+        transform: rotateX(180deg) translateZ(150px);
+      }
+      div.cube-face-3 {
+        background-color: rgba(0, 255, 0, 0.5);
+        transform:  rotateY(90deg) translateZ(150px);
+      }
+      div.cube-face-4 {
+        background-color: rgba(255, 255, 0, 0.5);
+        transform: rotateY(-90deg) translateZ(150px);
+      }
+      div.cube-face-5 {
+        background-color: rgba(255, 165, 0, 0.5);
+        transform: rotateX(90deg) translateZ(150px);
+      }
+      div.cube-face-6 {
+        background-color: rgba(255, 200, 200, 0.5);
+        transform: rotateX(-90deg) translateZ(150px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="cube">
+        <div class="cube-face cube-face-1">1</div>
+        <div class="cube-face cube-face-2">2</div>
+        <div class="cube-face cube-face-3">3</div>
+        <div class="cube-face cube-face-4">4</div>
+        <div class="cube-face cube-face-5">5</div>
+        <div class="cube-face cube-face-6">6</div>
+      </div>
+    </div>
+  </body>
+</html>
+</body>
+</html>

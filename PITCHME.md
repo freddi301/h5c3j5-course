@@ -755,7 +755,7 @@ document.querySelectorAll("p.highlight")
   hello
 </div>
 
-![box model](/examples/boxmodel.png)
+![box model](img/boxmodel.png)
 
 +++
 
