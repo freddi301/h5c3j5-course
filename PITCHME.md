@@ -1472,18 +1472,21 @@ name == 'text user typed in'
 
 ---?include=slides/DOM.md
 
+---?include=slides/functionalArrays.md
+
 ---
 
 TODO:
 - listeners
-- onclick
 - addEventListener
 - event bubbling
+- e.preventDefault() return false;
+- e.stopPropagation()
 
 ---
 
 todo:
-- input
+- input (new html5 props)
 - form (submit, action)
 - validating form
 

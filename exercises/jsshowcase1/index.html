@@ -1,1 +1,123 @@
-<script src="script.js"></script>
+<html>
+  <head>
+    <title>showcase</title>
+    <script src="script2.js"></script>
+  </head>
+  <body>
+    <header><h1>Showcase</h1></header>
+    <article>
+      <h2>function</h2>
+      <p>simple function definition</p>
+      <pre>
+        <code>
+          function alertMessage(message) {
+            alert(message);
+          }
+        </code>
+      </pre>
+      message: <input id="input-simple-function" type="text">
+      <input type="button" value="simple function" onclick="showcase.alertMessage(document.querySelector('#input-simple-function').value)">
+    </article>
+    <article>
+      <h2>function return value</h2>
+      <p>function ca return values, if no return statement, returns undefined</p>
+      <pre><code>
+        function add(x, y) { return x + y; }
+        function empty() {}
+      </code></pre>
+      <input type="number" id="input-x"><input type="number" id="input-y">
+      <input type="button" value="call function add, print result" onclick="alert(showcase.add(Number(q('#input-x').value), Number(q('#input-y').value)))">
+    </article>
+    <article>
+      <h2>hoisting</h2>
+      <p>all var declarations are hoisted to function beginning</p>
+      <pre><code>
+        function hoisting() {
+          var y = 4;
+          console.log(y,x);
+          var x = 6;
+          console.log(y,x);
+        }
+      </code></pre>
+      <input type="button" value="log to console" onclick="showcase.hoisting()">
+    </article>
+    <article>
+      <h2>function hoisting</h2>
+      <p>we can use top down coding style</p>
+      <pre><code>
+        function nomeCognome() {
+          alert(nome() + ' ' + cognome());
+        }
+        function nome() { return prompt('nome'); }
+        function cognome() { return prompt('cognome'); }
+      </code></pre>
+      <input type="button" value="nomeCognome()" onclick="showcase.nomeCognome()">
+    </article>
+    <article>
+      <h2>shadowing</h2>
+      <p>the most close var declaration applies</p>
+      <pre><code>
+        var x = 1;
+        var y = 2;
+        function shadow() {
+          var x = 5;
+          console.log(x, y);
+        }
+      </code></pre>
+      <input type="button" value="shadow" onclick="showcase.shadowing()">
+    </article>
+    <article>
+      <h2>clojure</h2>
+      <p>functions are values, so functions can take other functions as arguments, and can return them</p>
+      <pre><code>
+        var clojure = function (x){ return function(y) { return x + y; } };
+        var x = clojure(4);
+        var y = x(6);
+        var z = clojure(3)(7);
+        var x = <output id="clojure-output-x"></output>
+        var y = <output id="clojure-output-y"></output>
+        var z = <output id="clojure-output-z"></output>
+      </code></pre>
+      <input type="button" value="clojure" onclick="showcase.clojureShow()">
+    </article>
+    <article>
+      <h2>object literal</h2>
+      <p>objects and arrays can contain any other values</p>
+      <pre><code>
+        var exampleObject = {
+          a: 1,
+          b: {
+            c: [2,3,4]
+          },
+          "meaning of life": 42,
+          array: [1, 'bye', [4, 5]],
+        };
+        var objectLiteral = function() {
+          var o = showcase.exampleObject;
+          console.log(o["meaning of life"]);
+          console.log(o.hello);
+          console.log(o["meaning of life"] = 420);
+          console.log(o.hello = "ahoj");
+          console.log(o);
+          var a = o.array;
+          console.log(a[0]);
+          console.log(a[1]);
+          console.log(a[2]);
+          console.log(a[2][1]);
+        }
+      </code></pre>
+      <input type="button" value="objectLiteral()" onclick="showcase.objectLiteral()">
+    </article>
+    <article>
+      <h2>JSON</h2>
+      <p>JSON is a textual format for javascript objects</p>
+      <pre><code>
+        JSON.stringify(showcase.exampleObject);
+      </code></pre>
+      <input type="button" value="JSON.stringify" onclick="q('#toJSON').value = showcase.toJSON(showcase.exampleObject)"><br>
+      <pre>
+        <output id="toJSON"></output>
+      </pre>
+    </article>
+  </body>
+</html>
