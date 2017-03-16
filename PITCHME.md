@@ -1328,14 +1328,79 @@ console.log(obj.b.c[0]);
 
 +++
 
+# object
+
+is an associative array / dictionary
+
+the keys are strings, values can be anything
+
+```javascript
+var o = {
+  "meaning of life": 42,
+  hello: "ciao"
+}
+
+o["meaning of life"] // 42
+o.hello // "ciao"
+
+o["meaning of life"] = 420 // 420
+o.hello = "ahoj" // "ahoj"
+
+```
+
++++
+
+# array
+
+arrays in javascript can have variable length
+
+```javascript
+var a = [1, 'bye', [4, 5]]
+a[0] // 1
+a[1] // 'bye'
+a[2] // [4,5]
+a[2][1] // 5
+```
+
++++
+
+# all together
+
+objects and array can be mixed
+
+```javascript
+var m = {
+  toys: ['teddy bear', 'ak47'],
+  name: 'fred',
+  age: 42,
+  info: {
+    hobby: 'bow shooting',
+    "rpg stats": {
+      class: 'barbarian',
+      strength: 10,
+      intelligence: 4,
+      agility: 5,
+      inventory: [
+        { item: 'club', description: 'hurts', damage: 35 },
+        { item: 'potion', description: 'restore some HP', restore: 20 }
+      ]
+    }
+  }
+}
+```
+
++++
+
 # JSON
 
 is the most used information exchange format
 
 ```javascript
 JSON.stringify({a: 2, b: [1, 'c']});
+// '{"a": 2, "b": [1, "c"]}'
 
 JSON.parse('{"a": 2, "b": [1, "c"]}');
+// {a: 2, b: [1, 'c']}
 ```
 
 [formal definition](http://www.json.org/json-en.html)
