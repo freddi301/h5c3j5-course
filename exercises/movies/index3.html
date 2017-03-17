@@ -1,0 +1,171 @@
+<html>
+  <head>
+    <title>Movies</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <style>
+      p {
+        color: gray;
+      }
+      section>article>p {
+        overflow: auto;
+      }
+      section>article img {
+        width: 70px;
+        float: left;
+      }
+      * {
+        font-family: 'Roboto', sans-serif;
+      }
+      .font-color-black {
+        color: black;
+      }
+      footer {
+        clear: both;
+      }
+      .display-flex {
+        display: flex;
+      }
+      .flex-grow-1 {
+        flex-grow: 1;
+      }
+      .flex-grow-10 {
+        flex-grow: 10;
+      }
+      nav, .section-container, aside {
+        padding: 1em;
+      }
+      header>h1 {
+        text-align: center;
+      }
+      footer {
+        background-color: black;
+        padding: 1em;
+        color: white;
+        display: flex;
+      }
+      body {
+        margin: 0px;
+      }
+    </style>
+    <script>
+      var addClassFontColorBlack = function () {
+        document.querySelector("body > section > article > p > span").setAttribute('class', 'font-color-black');
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Movies</h1>
+    </header>
+    <div class="display-flex">
+      <nav class="flex-grow-1">
+        <ul>
+          <li><a href="#section1">section 1</a></li>
+          <li><a href="#section2">section 2</a></li>
+          <li><a href="#oscar2017">Oscar 2017</a></li>
+          <select>
+            <option value="title">Title</option>
+            <optgroup label="Year">
+              <option value="asc">ascendent</option>
+              <option value="dsc">discendent</option>
+            </optgroup>
+          </select>
+        </ul>
+      </nav>
+      <div class="flex-grow-10 section-container">
+        <section id="section1">
+          <h2>Section</h2>
+          <article>
+            <h3>Article</h3>
+            <p>
+              <img src="https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png"/>
+              Lorem <span onclick="addClassFontColorBlack()">Ipsum</span>
+              dolor sit amet,<br/>consectetur adipiscing elit.
+            </p>
+          </article>
+        </section>
+        <section id="oscar2017">
+          <h1>Oscars</h1>
+          <article>
+            <h3>Best Films Awards</h3>
+            <ol>
+              <li>Moonlight</li>
+              <li>La La Land</li>
+            </ol>
+          </article>
+        </section>
+        <section>
+          <table>
+            <caption>Films</caption>
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Year</th>
+                <th>Director</th>
+                <th>Genre</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Moonlight</td>
+                <td rowspan="2">2017</td>
+                <td>Barry</td>
+                <td>Drama</td>
+              </tr>
+              <tr>
+                <td>La La Land</td>
+                <td>Damien</td>
+                <td>Musical</td>
+              </tr>
+              <tr>
+                <td>Kill Bill Vol 1</td>
+                <td>2003</td>
+                <td colspan="2">Quentin Tarantino</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th>Title</th>
+                <th>Year</th>
+                <th>Director</th>
+                <th>Genre</th>
+              </tr>
+            </tfoot>
+          </table>
+        </section>
+      </div>
+      <aside class="flex-grow-1">
+        <h1>Search</h1>
+        <form>
+          <fieldset>
+            <legend>Genre</legend><br>
+            <input type="checkbox" value="scifi"/>SciFi<br />
+            <input type="checkbox" value="splatter"/>Splatter<br />
+            <input type="checkbox" value="action"/>Action
+          </fieldset>
+          <fieldset>
+            <legend>Year</legend>
+            <input type="radio" name="year" value="2017"/>2017<br />
+            <input type="radio" name="year" value="2016"/>2016<br />
+            <input type="radio" name="year" value="2015"/>2015
+          </fieldset>
+        </form>
+      </aside>
+    </div>
+    <footer>
+      <span>Frederik Batuna</span>
+      <span class="flex-grow-1"></span>
+      <input type="button" id="like">
+    </footer>
+    <script>
+      var likeButton = document.getElementById('like');
+      var count = 0;
+      likeButton.value = 'like ' + count;
+      var like = function () {
+        count = count + 1;
+        likeButton.value = 'like ' + count;
+      }
+      likeButton.addEventListener('click', like);
+    </script>
+  </body>
+</html>
