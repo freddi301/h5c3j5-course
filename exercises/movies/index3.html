@@ -159,11 +159,12 @@
     </footer>
     <script>
       var likeButton = document.getElementById('like');
-      var count = 0;
+      var count = Number(localStorage.like) || 0;
       likeButton.value = 'like ' + count;
       var like = function () {
         count = count + 1;
         likeButton.value = 'like ' + count;
+        localStorage.like = count;
       }
       likeButton.addEventListener('click', like);
     </script>
