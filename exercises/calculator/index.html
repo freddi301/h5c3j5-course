@@ -1,0 +1,38 @@
+<html>
+  <body>
+    <input id="a" type="number">
+    <select id="o">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+    </select>
+    <input id="b" type="number">
+    <input id="calculate" type="button" value="=">
+    <output id="r"></output>
+    <script>
+      var a = document.getElementById('a');
+      var b = document.getElementById('b');
+      var o = document.getElementById('o');
+      var r = document.getElementById('r');
+      var button = document.getElementById('calculate');
+      var ops = {
+        '+': function (x, y) { return x + y; },
+        '-': function (x, y) { return x - y; },
+        '*': function (x, y) { return x * y; },
+        '/': function (x, y) { return x / y; },
+      }
+      function calculate() {
+        var res = ops[o.value](
+          Number(a.value) || NaN,
+          Number(b.value) || NaN
+        );
+        r.value = res;
+      }
+      button.addEventListener('click', calculate);
+      a.addEventListener('keyup', calculate);
+      b.addEventListener('keyup', calculate);
+      o.addEventListener('change', calculate);
+    </script>
+  </body>
+</html>
