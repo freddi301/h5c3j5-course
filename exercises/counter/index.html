@@ -1,0 +1,17 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <input id="inc" type="button" value="like"/>
+    <script>
+      var count = 0;
+      function inc() {
+        count = count + 1;
+        bottone.value = 'like ' + count;
+      }
+      var bottone = document.getElementById('inc');
+      bottone.value = 'like ' + count;
+      bottone.addEventListener('click', inc);
+    </script>
+  </body>
+</html>
