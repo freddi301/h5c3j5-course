@@ -5,15 +5,17 @@
     <ul id="todo-list"></ul>
     <script type="text/javascript">
       var ul = document.getElementById('todo-list');
-      [
+      var array = [
         'sveglia',
         'doccia',
         'colazione',
-      ].forEach(function(item){
+      ];
+      var stampaLinea = function (i) {
         var li = document.createElement('li');
-        li.innerText = item;
+        li.innerText = i;
         ul.appendChild(li);
-      });
+      }
+      array.forEach(stampaLinea);
     </script>
   </body>
 </html>
