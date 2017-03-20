@@ -1,0 +1,19 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <ul id="todo-list"></ul>
+    <script type="text/javascript">
+      var ul = document.getElementById('todo-list');
+      [
+        'sveglia',
+        'doccia',
+        'colazione',
+      ].forEach(function(item){
+        var li = document.createElement('li');
+        li.innerText = item;
+        ul.appendChild(li);
+      });
+    </script>
+  </body>
+</html>
