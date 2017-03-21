@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <style>
+      img {
+        width: 100px;
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="sezione">
+    </section>
+    <script>
+      var sezione = document.getElementById('sezione');
+      var articolo1 = document.createElement('article');
+        var titolo1 = document.createElement('h1');
+        titolo1.innerText = 'Via col Vento';
+        articolo1.appendChild(titolo1);
+        var paragrafo1 = document.createElement('p');
+          var immagine1 = document.createElement('img');
+          immagine1.src = "http://cultura.biografieonline.it/wp-content/uploads/2012/09/Via-col-vento.jpg";
+          paragrafo1.appendChild(immagine1);
+          var descrizione1 = document.createElement('span');
+          descrizione1.innerText = 'drammatico, america, guerra di secessione';
+          paragrafo1.appendChild(descrizione1);
+          paragrafo1.appendChild(document.createElement('br'))
+          var link1 = document.createElement('a');
+          link1.innerText = 'wikipedia';
+          link1.setAttribute('href', 'https://it.wikipedia.org/wiki/Via_col_vento');
+          paragrafo1.appendChild(link1);
+          articolo1.appendChild(paragrafo1);
+        sezione.appendChild(articolo1);
+    </script>
+  </body>
+</html>
