@@ -1,0 +1,27 @@
+<html>
+  <body>
+    <ol id="lista-ordinata"></ol>
+    <script>
+      var ol = document.getElementById('lista-ordinata');
+
+      var li1 = document.createElement('li');
+        var link1 = document.createElement('a');
+        link1.innerText = 'prima';
+        link1.setAttribute('href', 'https://it.wikipedia.org/wiki/Prima_guerra_mondiale');
+        link1.setAttribute('target', 'prima');
+        li1.appendChild(link1);
+      ol.appendChild(li1);
+
+      var li2 = document.createElement('li');
+        var link2 = document.createElement('a');
+        link2.innerText = 'seconda';
+        link2.setAttribute('href', 'https://it.wikipedia.org/wiki/Seconda_guerra_mondiale');
+        link2.setAttribute('target', 'second');
+        li2.appendChild(link2);
+      ol.appendChild(li2);
+
+
+
+    </script>
+  </body>
+</html>

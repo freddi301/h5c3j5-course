@@ -1,0 +1,38 @@
+<html>
+  <body>
+    <ul id='id-del-tag-ul'>
+    </ul>
+    <script>
+      /*
+        creare 3 tag <li> in <ul> {
+
+          crea primo <li>
+          inserisci in primo <li> testo 'sveglia'
+          aggiungi primo <li> in <ul>
+
+          crea secondo <li>
+          inserisci in secondo <li> testo 'docciao'
+          aggiungi secondo <li> in <ul>
+
+          crea terzo <li>
+          inserisci in terzo <li> testo 'colazione'
+          aggiungi terzo <li> in <ul>
+        }
+       */
+
+        var ilmioul = document.getElementById('id-del-tag-ul')
+
+        var primoli = document.createElement('li');
+        primoli.innerText = 'sveglia';
+        ilmioul.appendChild(primoli)
+
+        var secondoli = document.createElement('li');
+        secondoli.innerText = 'doccia';
+        ilmioul.appendChild(secondoli);
+
+        var terzoli = document.createElement('li');
+        terzoli.innerText = 'colazione';
+        ilmioul.appendChild(terzoli);
+    </script>
+  </body>
+</html>
