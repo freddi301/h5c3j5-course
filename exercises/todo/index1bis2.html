@@ -1,0 +1,33 @@
+<html>
+  <body>
+    <script>
+
+      function q(selector) { return document.querySelector(selector); }
+
+      function e(tagname, innerText, parentElement) {
+        var element = document.createElement(tagname);
+        if (innerText !== undefined) {
+          element.innerText = innerText;
+        }
+        if (parentElement !== undefined) {
+          parentElement.appendChild(element);
+        }
+        return element;
+      }
+
+      var ilmioul = e('ul', undefined, document.body);
+
+      var mioarray = ['sveglia', 'doccia', 'colazione'];
+
+      /*for (var i = 0; i < mioarray.length; i++) {
+        e('li', mioarray[i], ilmioul);
+      }*/
+
+      mioarray.forEach(function (testo) {
+        return e('li', testo, ilmioul)
+      });
+
+      // mioarray.forEach(testo => e('li', testo, ilmioul));
+    </script>
+  </body>
+</html>
