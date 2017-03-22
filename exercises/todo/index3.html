@@ -1,0 +1,38 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <ul id="todo-list"></ul>
+    <input type="text" id="nuovo">
+    <input type="button" value="+" id="pulsante">
+    <script type="text/javascript">
+      var ul = document.getElementById('todo-list');
+      var array = [
+        'sveglia',
+        'doccia',
+        'colazione',
+      ];
+      var stampaLinea = function (linea) {
+        var li = document.createElement('li');
+        li.innerText = linea;
+        ul.appendChild(li);
+      }
+      var cancellaTutto = function() {
+        Array.from(ul.children).forEach(function(figlio){
+          ul.removeChild(figlio);
+        })
+      }
+      array.forEach(stampaLinea);
+
+      var aggiungi = function(){
+        array.push(text.value);
+        cancellaTutto();
+        array.forEach(stampaLinea);
+      }
+
+      var text = document.getElementById('nuovo');
+      var bottone = document.getElementById('pulsante');
+      bottone.addEventListener('click', aggiungi);
+    </script>
+  </body>
+</html>
