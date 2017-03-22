@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      body {
+        margin: 0px;
+      }
+      header {
+        display: flex;
+      }
+      header > h1 {
+        flex-grow: 1;
+        text-align: center;
+        background-color: #EEEEEE;
+        margin: 0px;
+        padding: 0.5em;
+      }
+      header > h1.selected {
+        background-color: #FFCA28;
+      }
+      header > h1:active {
+        background-color: #FFB300;
+      }
+      section {
+        display: flex;
+      }
+      section > div,article {
+        padding: 1em;
+      }
+      section > div.left {
+        width: 30%;
+        background-color: #ECEFF1;
+      }
+      section > .right {
+        width: 70%;
+      }
+      .search {
+        display: flex;
+      }
+      .search > input[type=search] {
+        flex-grow: 1;
+      }
+      .all-words {
+        height: 200px;
+        flex-grow: 1;
+        background-color: white;
+        overflow-y: scroll;
+      }
+      section article img {
+        width: 100px;
+        float: left;
+        margin-right: 1em;
+      }
+      section article {
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="selected">Ita -> Eng</h1>
+      <h1>Eng -> Ita</h1>
+    </header>
+    <section>
+      <div class="left">
+        <div class="search">
+          <input type="search">
+          <input type="button" value="🔍">
+        </div>
+        <br>
+        <div class="all-words">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sapien leo, vulputate non sagittis ut, luctus fermentum enim. Suspendisse ac velit mauris. Duis varius nunc at elit suscipit, id tincidunt velit luctus. Sed at accumsan augue, faucibus tempus dolor. Integer pellentesque nisi sit amet vehicula venenatis. Nulla sed iaculis dolor. Sed venenatis urna id ex euismod, ac tincidunt nunc accumsan. Nulla eu nulla iaculis, dapibus ligula vitae, sollicitudin mauris. Vestibulum maximus sem quis aliquam pretium. Vestibulum hendrerit tincidunt semper. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam lacinia eget quam id bibendum. Mauris tincidunt turpis sit amet nisl blandit, ut dictum velit vulputate. Aenean id dui sodales quam luctus fermentum.
+        </div>
+      </div>
+      <article class="right">
+        <h2>lion</h2>
+        <p>
+          <img src="http://vignette1.wikia.nocookie.net/lionking/images/1/1f/MajesticMufasa.png/revision/latest?cb=20150526205722" alt="lion">
+          The lion (Panthera leo) is one of the big cats in the genus Panthera and a member of the family Felidae. The commonly used term African lion collectively denotes the several subspecies in Africa. With some males exceeding 250 kg (550 lb) in weight,[4] it is the second-largest living cat after the tiger. Wild lions currently exist in sub-Saharan Africa and in India (where an endangered remnant population resides in Gir Forest National Park). In ancient historic times, their range was in most of Africa, including North Africa, and across Eurasia from Greece and southeastern Europe to India. In the late Pleistocene, about 10,000 years ago, the lion was the most widespread large land mammal after humans: Panthera leo spelaea lived in northern and western Europe and Panthera leo atrox lived in the Americas from the Yukon to Peru.
+          <footer>
+            <a href="https://en.wikipedia.org/wiki/Lion">wikipedia</a>
+          </footer>
+        </p>
+      </article>
+    </section>
+  </body>
+</html>
