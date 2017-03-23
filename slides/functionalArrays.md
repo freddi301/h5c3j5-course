@@ -66,6 +66,8 @@ a
 ["one", "two"]
 ```
 
++++
+
 # Concat
 
 concatenates two arrays into a new one
@@ -81,6 +83,8 @@ b
 c
 [1,2,3,4]
 ```
+
++++
 
 # Slice
 
@@ -99,6 +103,8 @@ a.slice(0, -1)
 a
 ["Banana", "Orange", "Lemon", "Apple", "Mango"]
 ```
+
++++
 
 # Splice
 
@@ -192,12 +198,14 @@ modifies original array
 var a = [47, 4, 1, -5, 9];
 a.sort(function(a, b){
   if (a === b) return 0; // if items equal
-  if (a > b) return 1; // if item a to the beginning
-  return -1; // if item a to end of filtered array
+  if (a > b) return -1; // if item a to the beginning
+  return 1; // if item a to end of filtered array
 });
 [-5, 1, 4, 9, 47]
 
 ```
+
++++
 
 # map
 
@@ -227,6 +235,8 @@ a.reduce(function(memo, item){
 a
 [1, 2, 3, 4]
 ```
+
++++
 
 # Chaining
 
