@@ -1,0 +1,161 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      body {
+        margin: 0px;
+      }
+      header {
+        display: flex;
+      }
+      header > h1 {
+        flex-grow: 1;
+        text-align: center;
+        background-color: #EEEEEE;
+        margin: 0px;
+        padding: 0.5em;
+      }
+      header > h1.selected {
+        background-color: #FFCA28;
+      }
+      header > h1:active {
+        background-color: #FFB300;
+      }
+      section {
+        display: flex;
+      }
+      section > div,article {
+        padding: 1em;
+      }
+      section > div.left {
+        width: 30%;
+        background-color: #ECEFF1;
+      }
+      section > .right {
+        width: 70%;
+      }
+      .search {
+        display: flex;
+      }
+      .search > input[type=search] {
+        flex-grow: 1;
+        width: 100%;
+      }
+      .all-words {
+        height: 200px;
+        flex-grow: 1;
+        background-color: white;
+        overflow-y: scroll;
+      }
+      section article img {
+        width: 100px;
+        float: left;
+        margin-right: 1em;
+      }
+      section article {
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 id="ita-eng" class="selected">Ita -> Eng</h1>
+      <h1 id="eng-ita">Eng -> Ita</h1>
+    </header>
+    <section>
+      <div class="left">
+        <div class="search">
+          <input id="word" type="search">
+          <input id="translate" type="button" value="🔍">
+        </div>
+        <br>
+        <div id="all-words" class="all-words"></div>
+      </div>
+      <article class="right">
+        <header>
+          <h2 id="translated"></h2>
+        </header>
+        <p>
+          <img id="image">
+          <span id="description"></span>
+        </p>
+        <footer>
+          <a id="link">wikipedia</a>
+        </footer>
+      </article>
+    </section>
+    <script>
+      var languageButton = {
+        'italiano-inglese': document.getElementById('ita-eng'),
+        'english-italian': document.getElementById('eng-ita')
+      }
+      var language;
+      languageButton['italiano-inglese'].addEventListener('click', function(){ selectLanguage('italiano-inglese'); });
+      languageButton['english-italian'].addEventListener('click', function(){ selectLanguage('english-italian'); });
+
+      var allWords = document.getElementById('all-words');
+
+      var selectLanguage = function (lang) {
+        language = lang;
+        Object.keys(languageButton).forEach(function(item){
+          languageButton[item].setAttribute('class', '');
+        });
+        languageButton[lang].setAttribute('class', 'selected');
+        listAllWords();
+      }
+      function listAllWords() {
+        var words = Object.keys(dictionaries[language]);
+        Array.from(allWords.children).forEach(function(child){
+          allWords.removeChild(child);
+        })
+        words.forEach(function(word){
+          var wordElemnt = document.createElement('a');
+          wordElemnt.innerText = word;
+          wordElemnt.setAttribute('href', '#');
+          wordElemnt.addEventListener('click', function(){
+            wordElement.value = word;
+            translate();
+          });
+          allWords.appendChild(wordElemnt);
+          allWords.appendChild(document.createElement('hr'));
+        })
+      }
+      var dictionaries = {
+        'italiano-inglese': {
+          '__no_word': 'parola non trovata',
+          'leone': {
+            word: 'lion',
+            link: 'https://en.wikipedia.org/wiki/Lion',
+            image: 'http://vignette1.wikia.nocookie.net/lionking/images/1/1f/MajesticMufasa.png/revision/latest?cb=20150526205722',
+            description: `The lion (Panthera leo) is one of the big cats in the genus Panthera and a member of the family Felidae. The commonly used term African lion collectively denotes the several subspecies in Africa. With some males exceeding 250 kg (550 lb) in weight,[4] it is the second-largest living cat after the tiger. Wild lions currently exist in sub-Saharan Africa and in India (where an endangered remnant population resides in Gir Forest National Park). In ancient historic times, their range was in most of Africa, including North Africa, and across Eurasia from Greece and southeastern Europe to India. In the late Pleistocene, about 10,000 years ago, the lion was the most widespread large land mammal after humans: Panthera leo spelaea lived in northern and western Europe and Panthera leo atrox lived in the Americas from the Yukon to Peru.`
+          }
+        },
+        'english-italian': {
+          '__no_word': 'no such word',
+          'lion': {
+            word: 'leone',
+            link: 'https://it.wikipedia.org/wiki/Leone',
+            image: 'http://vignette1.wikia.nocookie.net/lionking/images/1/1f/MajesticMufasa.png/revision/latest?cb=20150526205722',
+            description: `Il leone (Panthera leo Linnaeus, 1758) è un mammifero carnivoro della famiglia dei felidi. Dopo la tigre, è il più grande dei cinque grandi felidi del genere Panthera, con alcuni maschi la cui massa corporea supera i 250 kg. Il suo areale è nel 2011 ridotto quasi esclusivamente all'Africa subsahariana; il continuo impoverimento del suo habitat naturale e il protrarsi della caccia di frodo ai suoi danni ne fanno una specie vulnerabile secondo la IUCN. Questa definizione è giustificata da un declino stimato tra il 30 e il 50% nella zona africana nei vent'anni precedenti.`
+          }
+        }
+      }
+      selectLanguage('italiano-inglese');
+      var wordElement = document.getElementById('word');
+      var translateButton = document.getElementById('translate');
+      var translated = document.getElementById('translated');
+      var image = document.getElementById('image');
+      var link = document.getElementById('link');
+      var description = document.getElementById('description');
+      function translate() {
+        var info = dictionaries[language][wordElement.value];
+        if (info === undefined) { alert(dictionaries[language].__no_word); }
+        translated.innerText = info.word;
+        image.src = info.image;
+        link.setAttribute('href', info.link);
+        description.innerText = info.description;
+      }
+      translateButton.addEventListener('click', translate);
+    </script>
+  </body>
+</html>
