@@ -1479,7 +1479,7 @@ name == 'text user typed in'
 TODO:
 - listeners
 - addEventListener
-- event bubbling
+- [event bubbling](http://javascript.info/tutorial/bubbling-and-capturing)
 - e.preventDefault() return false;
 - e.stopPropagation()
 
@@ -1519,12 +1519,6 @@ TODO:
 TODO
 - store data on html elements
 - store data in html dataset
-
----
-
-# Lab
-
-TODO: cineforum interactive
 
 ---
 

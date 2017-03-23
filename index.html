@@ -30,24 +30,26 @@
         }
       }
       function getTitle(text) { return text.slice(3, text.indexOf('\n', 2)); }
+      function fetchMarkdownIncludes(text) {
+        const index = text.indexOf('\n---?include=');
+        if (~index) {
+          const endIndex = text.indexOf('\n', index + 1);
+          const path = text.substring(index, endIndex).replace('\n---?include=', '');
+          return fetchMarkdown(path)
+          .then(includeText => {
+            return text.substring(0, index) +
+            '\n---\n' +
+            includeText +
+            '\n' +
+            text.substring(endIndex);
+          })
+          .then(fetchMarkdownIncludes);
+        }
+        return text;
+      }
       function fetchMarkdown(url) {
         return fetch(url).then(res => res.text())
-        .then(text => {
-          const index = text.indexOf('\n---?include=');
-          if (~index) {
-            const endIndex = text.indexOf('\n', index + 1);
-            const path = text.substring(index, endIndex).replace('\n---?include=', '');
-            return fetchMarkdown(path)
-            .then(includeText => {
-              return text.substring(0, index) +
-              '\n---\n' +
-              includeText +
-              '\n' +
-              text.substring(endIndex);
-            })
-          }
-          return text;
-        })
+        .then(fetchMarkdownIncludes)
       }
       const query = parseQuery(location.search);
       var show;
